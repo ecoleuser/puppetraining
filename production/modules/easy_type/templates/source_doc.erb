@@ -1,0 +1,20 @@
+#
+# <%= module_name -%>::<%= name.to_s =~ %r(shared) ? (name.to_s.split('/') - ["shared"]).join('::').to_sym : name %>
+#
+# @summary <%= summary.to_s.strip %>
+<% if tail? -%>
+<%= ('# ' + tail.to_s.strip.gsub(/\n/, "\n# ")).strip %>
+<% end -%>
+#
+<% all_attribute_classes.each do |attribute| -%>
+<% if attribute.type_definition.nil? -%>
+# @param <%= attribute.name.to_s =~ %r(shared) ? (attribute.name.to_s.split('/') - ["shared"]).join('::').to_sym : attribute.name %>
+<% else -%>
+# @param [<%= type_parser(attribute.type_definition[:type]).gsub(/\n/, "\n#    ") -%>] <%= attribute.name %>
+<% end -%>
+#    <%= attribute.summary.to_s.strip.gsub(/\n/, "\n#    ") %>
+<% if attribute.tail? -%>
+<%= ('#    '+ attribute.tail.to_s.strip.gsub(/\n/, "\n#    ")).strip %>
+<% end -%>
+<%= '#' %>
+<% end -%>

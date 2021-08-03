@@ -1,0 +1,39 @@
+node default {
+include fmw_domain::extension_soa_suite
+include fmw_domain::domain
+include fmw_domain::nodemanager
+include fmw_domain::adminserver
+class { 'fmw_domain':
+      version                       => '12.2.1',                                          
+      java_home_dir                 => '/usr/java/jdk1.8.0_301',
+      middleware_home_dir           => '/opt/oracle/middleware',                           
+      weblogic_home_dir             => '/opt/oracle/middleware/wlserver',
+      os_user                       =>  'oracle', 
+      os_group                      =>  'oinstall',                                         
+      user_home_dir                 =>  '/home',                                         
+      tmp_dir                       => '/tmp',                                            
+      domains_dir                   => '/opt/oracle/middleware/user_projects/domains',
+      apps_dir                      => '/opt/oracle/middleware/user_projects/applications',
+      domain_name                   => 'base_domain',
+      weblogic_user                 => 'weblogic',
+      weblogic_password             => 'Welcome01',
+      adminserver_name              => 'AdminServer',                                    
+      adminserver_listen_address    => 'localhost',
+      adminserver_listen_port       => 7001,                                      
+      nodemanager_listen_address    => 'localhost',
+      nodemanager_listen_port       => 5556,                                     
+      restricted                    => false,                                            
+      soa_suite_cluster             => 'soa_cluster',
+      soa_suite_install_type        => 'SOA Suite',                 
+ 
+  
+      adminserver_startup_arguments => '-XX:PermSize=256m -XX:MaxPermSize=512m -Xms1024m -Xmx1024m', # default '-XX:PermSize=256m -XX:MaxPermSize=512m -Xms1024m -Xmx1024m'
+      
+      soa_server_startup_arguments  => '-XX:PermSize=256m -XX:MaxPermSize=512m -Xms1024m -Xmx1024m', # default '-XX:PermSize=256m -XX:MaxPermSize=512m -Xms1024m -Xmx1024m'
+    
+      repository_database_url       => 'jdbc:oracle:thin:@139.59.82.5:1539/orcl',
+      repository_prefix             => 'DEV3',
+      repository_password           => 'Welcome02',
+    }
+
+}

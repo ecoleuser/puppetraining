@@ -1,0 +1,11 @@
+node 'default' {
+oradb::net{ 'config net8':
+  oracle_home   => '/oracle/product/12.1/db',
+  version       => "12.1",
+  user          => 'oracle',
+  group         => 'dba',
+  download_dir  => '/install',
+  db_port       => 1521,
+}
+
+}

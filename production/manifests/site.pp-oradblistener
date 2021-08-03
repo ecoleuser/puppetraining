@@ -1,0 +1,12 @@
+node 'default' {
+oradb::listener{'start listener':
+  action        => 'start',  # running|start|abort|stop
+  oracle_base   => '/oracle',
+  oracle_home   => '/oracle/product/12.1/db',
+  user          => 'oracle',
+  group         => 'dba',
+  listener_name => 'listener' # which is the default and optional
+}
+
+
+}

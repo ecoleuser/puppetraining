@@ -1,0 +1,24 @@
+node 'default' {
+oradb::database{ 'testDb_Create':
+oracle_base => '/oracle',
+oracle_home => '/oracle/product/12.2/db',
+version => '12.2',
+user => 'oracle',
+group => 'dba',
+template => 'dbtemplate_12.2_vars',
+template_variables => { 'location01' => '/oradata/' , 'location02' => '/oraidx/' },
+download_dir => '/software',
+action => 'create',
+db_name => 'TESTDB',
+db_domain => 'oracle.com',
+db_port => 1521,
+sys_password => 'Welcome01',
+system_password => 'Welcome01',
+data_file_destination => "/oracle/oradata",
+recovery_area_destination => "/oracle/flash_recovery_area",
+character_set => "AL32UTF8",
+nationalcharacter_set => "UTF8",
+memory_percentage => 40,
+memory_total => 800,
+}
+}

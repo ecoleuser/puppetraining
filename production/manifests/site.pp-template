@@ -1,0 +1,10 @@
+$siteppvar = "testing 123"
+node 'puppet-node' {
+  class {user_account:}
+}
+
+node 'puppet-node2' {
+  class {user_account:
+   username => "bart",
+  }
+}

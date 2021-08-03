@@ -1,0 +1,6 @@
+node default {
+class { 'fmw_jdk::install':
+      java_home_dir => '/usr/java/jdk1.8.0_301',
+      source_file   => '/software/jdk-8u301-linux-x64.tar.gz',
+    }
+}

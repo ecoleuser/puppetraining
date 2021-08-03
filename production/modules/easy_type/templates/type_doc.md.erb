@@ -1,0 +1,41 @@
+---
+title: <%= name.to_s.gsub('_',' ') %>
+keywords: documentation
+layout: documentation
+sidebar: <%= module_name -%>_sidebar
+toc: false
+---
+## Overview
+
+<%= doc %>
+
+<%  if has_playground?-%>
+
+## Experience the Power of Puppet for <%= playground_name%>
+
+If you want to play and experiment with Puppet and <%= playground_name%>, please take a look at our playgrounds. At our playgrounds, we provide you with a pre-installed environment, where you experiment fast and easy.
+
+{% include super_hero.html title="For <%= playground_name -%>" ref="<%= playground_link -%>" %}
+
+<% end -%>
+
+<% if attributes.any? -%>
+## Attributes
+
+<%= attribute_summary %>
+<% end -%>
+
+<% all_attribute_classes.each do |attribute| -%>
+<% parsed_name = attribute.name.to_s =~ %r(shared) ? (attribute.name.to_s.split('/') - ["shared"]).join('::').to_sym : attribute.name %>
+### <%= parsed_name %><a name='<%="#{name}_#{parsed_name}"-%>'>
+
+<%= attribute.doc -%>
+
+<% if !self.to_s.match(/Puppet::Type/) -%>
+<% if attribute.type_definition -%>
+Type: `<%= attribute.type_definition[:type] %>`
+<%= "\nDefault:" + "\`" + attribute.type_definition[:default] + "\`" unless attribute.type_definition[:default].empty? %>
+<% end -%>
+<% end %>
+<%= back_to(name) %>
+<% end -%>

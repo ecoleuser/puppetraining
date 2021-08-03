@@ -1,0 +1,15 @@
+node 'default'{
+include apache_server
+}
+class apache_server {
+if ($facts['os']['family']== 'REDHAT'){
+    $apache_server = 'httpd'
+  } else{
+  $apache_server = 'apache2'
+}
+notify {"My OS is $apache_server"}
+package { $apache_server:
+    ensure => 'absent',
+    alias  => 'apache_server',
+  }
+}

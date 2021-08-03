@@ -1,0 +1,8 @@
+require_relative '../spec_helper_acceptance'
+require_relative '../support/shared_acceptance_specs'
+# rubocop: disable Style/BracesAroundHashParameters
+
+describe '<%= @entry.control_name %>' do
+  xit_behaves_like 'a CIS control on container'
+  xit_behaves_like 'a CIS control on pluggable'
+end

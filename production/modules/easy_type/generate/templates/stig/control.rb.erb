@@ -1,0 +1,15 @@
+#
+# See the file "LICENSE" for the full license governing this code.
+#
+#++--++
+#
+#--++--
+#
+define <%= module_name %>::controls::<%= @entry.control_name %>
+{
+  #{module_name}_setup { "<%= @entry.control_name %> on ${title}":
+    ensure => 'present',
+  }
+
+  alert('Specified STIG control is not yet automatically enforced.')
+}

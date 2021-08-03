@@ -1,0 +1,22 @@
+node 'oracledb' {
+$puppetDownloadMntPoint = "/software"
+
+oradb::installdb{ '12.1.0.2_Linux-x86-64':
+  version                => '12.1.0.2',
+  file                   => 'V46095-01',
+  databaseType           => 'SE',
+  oracleBase             => '/oracle',
+  oracleHome             => '/oracle/product/12.1/db',
+  bashProfile            => true,
+  user                   => 'oracle',
+  group                  => 'dba',
+  group_install          => 'oinstall',
+  group_oper             => 'oper',
+  downloadDir            => '/data/install',
+  zipExtract             => true,
+  puppetDownloadMntPoint => $puppetDownloadMntPoint,
+}
+
+
+}
+

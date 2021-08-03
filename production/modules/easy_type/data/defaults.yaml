@@ -1,0 +1,17 @@
+---
+easy_type::license::node_groups::modules:
+  - ora_config
+  - ora_install
+  - ora_cis
+  - wls_install
+  - wls_config
+  - mq_install
+  - mq_config
+  - iib_install
+  - iib_config
+  - oci_config
+  - ora_remote_access
+  - ldap_principal
+  - zfs_appliance
+  - github_config
+  - partition

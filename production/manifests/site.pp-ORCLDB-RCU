@@ -1,0 +1,17 @@
+node 'default' {
+include fmw_rcu
+class {'fmw_rcu::common':
+      version                => '12.2.1',
+      java_home_dir          => '/usr/java/jdk1.8.0_301',
+      middleware_home_dir    => '/opt/oracle/middleware',
+      oracle_home_dir        => '/opt/oracle/middleware/oracle_common',
+      rcu_prefix             => 'DEV3',
+      jdbc_connect_url       => 'jdbc:oracle:thin:@139.59.82.5:1539/orcl',
+      db_connect_url         => '139.59.82.5:1539:orcl',
+      db_connect_password    => 'Welcome01',
+      rcu_component_password => 'Welcome02',
+      os_user                => 'oracle',
+      os_group               => 'oinstall',
+      tmp_dir                => '/tmp',
+    }
+}

@@ -1,0 +1,8 @@
+fmw_inst::java_home_dir: '/usr/java/jdk1.8.0_301'
+fmw_inst::version: '12.2.1'
+fmw_inst::middleware_home_dir: '/opt/oracle/middleware'
+fmw_inst::soa_suite::java_home_dir: '/usr/java/jdk1.8.0_301'
+fmw_inst::soa_suite::source_file: '/software/V983383-01.zip'
+fmw_inst::tmp_dir: '/tmp'
+classes:
+- fmw_inst::soa_suite

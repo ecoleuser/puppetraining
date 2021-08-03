@@ -1,0 +1,15 @@
+require 'spec_helper'
+
+describe '<%= module_name %>::controls::<%= @entry.control_name %>' do
+  let(:title) { '<%= @entry.control_name %>'}
+
+  on_supported_os(:facterversion => '2.4').each do |os, os_facts|
+    next unless os =~ /redhat-7-x86_64/
+
+    context "on #{os}" do
+        let(:facts) { os_facts }
+
+        it { is_expected.to compile }
+    end
+  end
+end

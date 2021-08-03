@@ -1,0 +1,10 @@
+node 'puppetdb' {
+db_listener{ 'startlistener':
+  ensure          => 'running', 
+  oracle_base_dir => '/oracle',
+  oracle_home_dir => '/oracle/product/12.1/db',
+  os_user         => 'oracle',
+  listener_name   => 'listener' # which is the default and optional
+}
+
+}

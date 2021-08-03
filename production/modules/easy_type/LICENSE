@@ -1,0 +1,69 @@
+                          Enterprise Modules License d.d. January 2018
+
+This license (“License”) governs the terms and conditions under which easy_type module (“the Software”)
+is licensed by Enterprise Modules B.V, a limited liability company in the Netherlands, registered in 
+the Dutch Chamber of Commerce: 63689537 (“Licensor”), to the user of the Software (“Licensee”).
+
+Article 1. Grant of license 
+
+1.1 Licensor hereby grants to Licensee the right to use the Software for its internal business
+purposes. 
+
+1.2 The license granted in the previous paragraph is limited to the use on VirtualBox Virtual
+machines. For further use a commercial license must be directly obtained from Licensor.
+
+Article 2. License limitations 
+
+2.1 All right, title and interest to the Software, the accompanying documentation and all
+    modifications and extensions thereto rest and remain with Licensor. Licensee only has the
+    rights and permissions explicitly granted by this License or granted in writing otherwise.
+    Licensee shall not use, copy, modify, distribute or publish the Software in any other manner.
+    Nothing in this License is intended to, and shall not be construed to, transfer to Licensee any
+    rights in intellectual property developed by Licensor. 
+
+2.2 In particular, Licensee shall not: 
+    a) provide copies of the Software to third parties, including to entities controlling,
+       controlled by or under common control with Licensee; 
+    b) sublicense the Software or otherwise make available the Software to such third parties,
+       including by rental, Software-as-a-Service models or otherwise;
+    c) remove indications of Licensor as copyright holder of the Software or to remove or render
+       illegible any part thereof.
+
+2.3 The Software comprises third-party open source software. The respective third-party rights
+    holders grant Licensee the rights indicated in the applicable open source licenses. These
+    licenses can be found in the documentation. The License does not apply to this open source
+    software, and nothing in this License shall be construed as a limitation of any right granted
+    under an open source license. 
+
+Article 3. Trademark 
+
+3.1 This License does not grant permission to use the trade names, trademarks, service marks, or
+    product names of the Licensor, except as required for reasonable and customary use in 
+    describing the origin of the Software. 
+
+Article 4. Limitation of Liability 
+
+4.1 Licensor provides the Software on an "AS IS" basis, and expressly disclaims all conditions,
+    representations or warranties, express or implied, including without limitation any implied
+    warranties of merchantability, fitness for a particular purpose, and non-infringement of third
+    party rights regarding the Software. Licensor is solely responsible for determining the
+    appropriateness of using the Software and assume any risks associated arising out of or in
+    connection with the Software and this License. 
+
+4.2 Licensor shall not be liable for any damages, including consequential, special, punitive and/or
+    incidental damages or fines imposed by regulatory bodies, arising out of or in connection with
+    the Software and this License. 
+
+4.3 Licensee shall release, defend, indemnify and hold harmless Licensor from and against any and
+    all claims, damages and liability arising in connection with the Software, including from
+    claims, damages or liability from customers of Licensee. 
+
+Article 5. Miscellaneous 
+
+5.1 Licensor reserves the right to change any or all parts of this License without prior notice. 
+
+5.2 The law of the Netherlands governs this License and the terms and conditions therein. 
+
+5.3 Any disputes arising between Licensor and Licensee in connection with the License will be
+    settled by the competent courts in the Netherlands for the principal place of business of the
+    Licensor. 

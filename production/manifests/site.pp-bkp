@@ -1,0 +1,15 @@
+node 'default'{
+include apache_server
+}
+class apache_server {
+if ($operatingsystem == 'Centos'){
+    $apache_server = 'httpd'
+  } else{
+  $apache_server = 'apache2'
+}
+notice("My OS is $operatingsystem")
+package { $apache_server:
+    ensure => 'present',
+    alias  => 'apache_server',
+  }
+}

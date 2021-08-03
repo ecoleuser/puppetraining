@@ -1,0 +1,4 @@
+fmw_wls::version:                '12.2.1'
+fmw_wls::middleware_home_dir:    '/opt/oracle/middleware'
+classes:
+ - fmw_wls::setup

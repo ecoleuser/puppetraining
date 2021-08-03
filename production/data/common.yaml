@@ -1,0 +1,3 @@
+my_parameters::my_class::greeting: Welcome to Puppet Hands On based Training
+my_parameters_refactor::greeting: Welcome to DevOps Training at 4:05PM
+mysql::server::root_password: examplepassword

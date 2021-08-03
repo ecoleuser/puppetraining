@@ -1,0 +1,8 @@
+fmw_wls::version:                '12.2.1'
+fmw_wls::middleware_home_dir:    '/opt/oracle/middleware'
+fmw_wls::install::java_home_dir: '/usr/java/jdk1.8.0_301'
+fmw_wls::install::source_file:   '/software/fmw_12.2.1.4.0_infrastructure.jar'
+fmw_wls::install::install_type:  'infra'
+classes:
+ - fmw_wls::setup
+ - fmw_wls::install

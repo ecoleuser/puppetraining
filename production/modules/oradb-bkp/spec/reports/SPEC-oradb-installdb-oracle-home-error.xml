@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="oradb::installdb oracle_home error" tests="1" time="0.104089" failures="0" errors="0" skipped="0" timestamp="2016-09-12T16:21:35+02:00">
+  <testcase name="oradb::installdb oracle_home error should raise Puppet::Error with message matching /You must specify an oracle_home/" time="0.103623">
+  </testcase>
+</testsuite>

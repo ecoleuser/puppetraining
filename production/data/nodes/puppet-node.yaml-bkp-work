@@ -1,0 +1,14 @@
+my_parameters_refactor::greeting: Hello REDHAT
+profile::jenkins::master::jenkins_port: '80'
+profile::jenkins::master::java_dist: 'jdk'
+java_home_dir:                   &java_home_dir     '/usr/java/jdk1.8.0_301'
+fmw_wls::version:                '12.2.1.4'
+fmw_wls::middleware_home_dir:    '/opt/oracle/middleware'
+fmw_wls::install::java_home_dir: *java_home_dir
+fmw_wls::install::source_file:   '/software/fmw_12.2.1.4.0_infrastructure_Disk1_1of1.zip'
+fmw_wls::install::install_type:  'infra'
+classes:
+   - profile::jenkins::master
+   - role::jenkins::master
+   - fmw_wls::setup
+   - fmw_wls::install

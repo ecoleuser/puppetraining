@@ -1,0 +1,23 @@
+Hello <%= @username %>
+<%- if @username == "homer" -%>
+  Your name is: <%= @username %>
+<%- else -%>
+  Sorry you are not homer
+<%- end -%>
+
+<%-# Here is some simple ruby code -%>
+The time is now <%= Time.now %>.
+
+<%-# Here is a simply ruby for-loop -%>
+<%- for fruit in ['apple','banana','mango'] -%>
+  A <%= fruit %> is a fruit.
+<%- end -%>
+
+<%-# here is a facter -%>
+The OS of this machine = <%= @osfamily %>
+
+<%-# here is a variable that is one scope up -%>
+Here is a init.pp variable: <%= @greetings %>
+
+<%-# here is a variable that is 2 scope up -%>
+Here is a site.pp variable: <%= @siteppvar %>
